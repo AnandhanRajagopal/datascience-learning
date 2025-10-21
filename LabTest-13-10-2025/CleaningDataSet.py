@@ -21,3 +21,6 @@ print(df.info())
 
 print("\nNumber of NaN values in each column:")
 print(df.isna().sum())
+
+#Save the cleaned dataset
+df.to_csv("cleaned_dataset.csv", index=False)
