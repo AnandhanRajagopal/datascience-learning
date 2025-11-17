@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 n = 10
 p = 0.6
 
-r_values = list(range(n+1))
+r_values = list(range(n))
 
 dist = [binom.pmf(r,n,p) for r in r_values]
 
