@@ -1,0 +1,86 @@
+Great! Here’s a list of the most commonly used primary functions and properties in a Pandas *DataFrame (df)*, grouped by purpose so you can learn them efficiently:
+
+---
+
+📄 1. Basic Info & Structure
+
+| Function/Property       | Purpose                          |
+|--------------------------|----------------------------------|
+| df.shape              | Rows and columns (tuple)         |
+| df.columns            | List of column names             |
+| df.index              | Index (row labels)               |
+| df.dtypes             | Data types of each column        |
+| df.info()             | Summary of DataFrame structure   |
+| df.describe()         | Stats summary (mean, std, etc.)  |
+| df.head(n)            | First n rows                     |
+| df.tail(n)            | Last n rows                      |
+
+---
+
+📊 2. Selecting & Accessing Data
+
+| Function/Property       | Purpose                          |
+|--------------------------|----------------------------------|
+| df['col'] or df.col | Select single column             |
+| df[['col1', 'col2']]  | Select multiple columns          |
+| df.loc[row, col]      | Access by label              |
+| df.iloc[row, col]     | Access b| df.at[row, col]       | Fast access for scalar value     |
+| df.iat[row, col]      | Fast access by position          |
+
+---
+
+🔍 3. Filtering & Conditions
+
+python
+df[df['price'] > 10000]      # Rows where condition is True
+df[df['brand'] == 'BMW']     # Filter by value
+df[(df['price'] > 10000) & (df['mileage'] < 20)]
+
+
+---
+
+🔄 4. Modifying Data
+
+| Function                  | Purpose                          |
+|---------------------------|----------------------------------|
+| df['new'] = ...         | Add a new column                 |
+| df.drop(columns=['col'])| Drop column                      |
+| df.drop(index=3)        | Drop row by index                |
+| df.rename(columns={})   | Rename columns                   |
+| df.sort_values('col')   | Sort by column                   |
+| df.reset_index()        | Reset row index                  |
+| df.set_index('col')     | Set a column as index            |
+
+---
+
+📈 5. Aggregation & Grouping
+
+| Function                    | Purpose                        |
+|-----------------------------|--------------------------------|
+| df.sum()                  | Sum by column                  |
+| df.mean()                 | Mean by column                 || df.groupby('col')         | Group by column                |
+| .agg(['mean', 'max'])     | Multiple aggregations          |
+| df['col'].value_counts()  | Frequency count                |
+| df['col'].unique()        | Unique values                  |
+
+---
+
+🧹 6. Handling Missing Data
+
+| Function                  | Purpose                          |
+|---------------------------|----------------------------------|
+| df.isnull()             | Detect missing values            |
+| df.notnull()            | Detect non-missing values        |
+| df.dropna()             | Drop rows with missing data      |
+| df.fillna(value)        | Fill missing values              |
+
+---
+💾 7. Input & Output
+
+| Function                  | Purpose                          |
+|---------------------------|----------------------------------|
+| pd.read_csv('file.csv') | Read CSV                         |
+| df.to_csv('file.csv')   | Save DataFrame to CSV            |
+| df.to_excel('file.xlsx')| Export to Excel                  |
+
+---
