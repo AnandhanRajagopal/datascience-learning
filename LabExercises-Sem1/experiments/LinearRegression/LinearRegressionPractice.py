@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import os
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(base_dir, "Algerian_forest.csv")
@@ -26,7 +29,7 @@ y = df['FWI']
 print(x)
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
+    x, y, test_size=0.2, random_state=42
 )
 
 scaler = StandardScaler()
